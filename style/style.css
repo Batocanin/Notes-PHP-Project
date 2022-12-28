@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+}
+/* Reusable */
+.btn {
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right, #fbdb89, #f48982);
+    border-radius: 9px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
+/*          */
+.main {
+    height: 100vh;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.section__note {
+    width: 80%;
+    height: 80%;
+}
+.note__section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f5f3;
+    padding: 3rem 2rem 3rem 2rem;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+}
+.note__header--logo {
+    border-radius: 9px;
+    height: 6rem;
+    cursor: pointer;
+}
+.header__hi {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 9px;
+}
+.note__name{
+    color: #615551;
+
+    font-weight: 600;
+}
+.hi__smile {
+    width: 3rem;
+    height: 2rem;
+}
+.note__header--buttons{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.note__content {
+    display: flex;
+}
+
+
+/* SIDE */
+.note__section--side {
+    background-image: linear-gradient(to bottom, #fcb23e, #ffc754);
+    height: 60rem;
+    width: 35rem;
+    border-bottom-left-radius: 9px;
+}
+.note__section--list{
+    height: 51rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.note__section--list::-webkit-scrollbar{
+    width: 3px;
+}
+.note__section--list::-webkit-scrollbar-thumb {
+    background-color: white;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+.content::-webkit-scrollbar{
+    width: 6px;
+}
+.content::-webkit-scrollbar-thumb {
+    padding: 0 1rem;
+
+    background-color: #f38e82;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+}
+.side__search {
+    padding: 2rem 2.5rem 1rem 2.5rem;
+    border-bottom: 1px solid orange;
+}
+.side__search--input {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.side__search--input::placeholder {
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+}
+.side__search--input:focus{
+    outline: none;
+}
+.showAllNotes{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.showAll__notes {
+    text-decoration: none;
+    color: #615551;
+    font-size: 1.2rem;
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 9px;
+    color: rgba(255, 69, 0, 0.8);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.no__result {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+}
+.note__link {
+    text-decoration: none;
+    color: #615551;
+}
+.note:first-child{
+}
+.note {
+    padding: 1rem 1rem;
+    border-bottom: 1px solid orange;
+}
+.note:hover {
+}
+.note-title {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.note-time {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+.note-firstLine {
+    color: #fff;
+    font-size: 1.6rem;
+    white-space: nowrap;
+}
+
+/*  Main Content */
+.content__header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 5rem 2rem 2rem;
+}
+.content__title{
+    color: #615551;
+    font-size: 3rem;
+    word-break: break-word;
+    order: 1;
+}
+.content__header--buttons {
+    order: 0;
+    align-self: end;
+    display: flex;
+    gap: 2rem;
+}
+.content {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #615551;
+    padding: 1rem 1rem 1rem 2rem;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+/*               */
+/* Main Content  */
+.main__content {
+    width: 100%;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-y: scroll;
+    background-color: #f9f5f3;
+    height: 60rem;
+    border-bottom-right-radius: 9px;
+}
+.note__edit {
+    padding: 2rem;
+}
+.note__title-input {
+    border: none;
+    background-color: transparent;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1rem;
+    color: #615551;
+    width: 100%;
+    font-size: 1.6rem;
+    background-color: #fff;
+}
+.note__title-input::placeholder{
+    color: #615551;
+    font-size: 1.8rem;
+}
+.note__title-input:focus {
+    outline: 1px solid #fff;
+}
+.textarea__content {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border: 1px solid #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    color: #615551;
+    resize:none;
+}
+.textarea__content::placeholder{
+    color: #615551;
+}
+.textarea__content:focus{
+    outline: 1px solid #fff;
+}
+.radio__btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3rem;
+}
+.important__btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.important__text {
+    font-size: 1.4rem;
+    color: #615551;
+    font-weight: 600;
+}
+.note__important--button {
+    width: 2rem;
+    height: 1.5rem;
+}
+
+
+/*  Imp */
+.important {
+    background-color: #f38e82;
+}
+.note.important .note-title {
+    color: #fff;
+}
+.note.important .note-time {
+    color: #fff;
+}
+.note.important .note-firstLine {
+    color: #fff;
+}
+@media screen and (max-width: 930px) {
+    .note__logo {
+        display: none;
+    }
+    .note__section-header {
+    flex-direction: column;
+    }
+    .note__content {
+    flex-direction: column;
+    }
+    .note__section--side {
+        width: 100%;
+        height: 29rem;
+    }
+    .note__section--list {
+        height: 100%;
+    }
+    .content__header {
+        display: flex;
+        flex-direction: column;
+    }
+    .content__header--buttons {
+        margin-bottom: 2rem;
+    }
+    .content__header,
+    .content{
+        padding: 1rem;
+    }
+    .note__section--side{
+        border-bottom-left-radius: 0;
+    }
+
+}
+@media screen and (max-width: 810px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media screen and (max-width: 650px) {
+    html{
+        font-size: 35%;
+    }
+}
